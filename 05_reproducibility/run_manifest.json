@@ -1,0 +1,20 @@
+{
+  "script": "03_download_eii",
+  "version": "1.0.0",
+  "timestamp": "2026-04-24T11:25:07.076076",
+  "gee_asset": "projects/landler-open-data/assets/eii/global/eii_global_v1",
+  "scale": 300,
+  "pa_count": 20,
+  "bands_processed": [
+    "eii",
+    "functional_integrity",
+    "structural_integrity",
+    "compositional_integrity"
+  ],
+  "method_compare_enabled": false,
+  "outputs": {
+    "eii_stats": "D:\\EII_Bhutan_Protected_Areas\\01_data\\03_tables\\pa_eii_stats.csv",
+    "all_band_stats": "D:\\EII_Bhutan_Protected_Areas\\01_data\\03_tables\\pa_all_bands_stats.csv",
+    "component_stats": "D:\\EII_Bhutan_Protected_Areas\\01_data\\03_tables\\pa_component_stats.csv"
+  }
+}

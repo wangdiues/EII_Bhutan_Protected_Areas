@@ -1,0 +1,7 @@
+covariate,asset,type,bands,accessible
+human_modification,CSP/HM/GlobalHumanModification,ImageCollection,gHM,True
+hansen_forest,UMD/hansen/global_forest_change_2024_v1_12,Image,"treecover2000, loss, gain, lossyear, first_b30",True
+ndvi_modis,MODIS/061/MOD13Q1,ImageCollection,"NDVI, EVI, DetailedQA, sur_refl_b01, sur_refl_b02",True
+burned_area,MODIS/061/MCD64A1,ImageCollection,"BurnDate, Uncertainty, QA, FirstDay, LastDay",True
+worldcover,ESA/WorldCover/v200,ImageCollection,Map,True
+elevation,USGS/SRTMGL1_003,Image,elevation,True

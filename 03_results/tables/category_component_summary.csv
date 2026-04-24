@@ -1,0 +1,16 @@
+Category,Component,Mean,SD,Min,Max
+Biological Corridor,Functional,0.6627,0.0969,0.4947,0.8251
+Biological Corridor,Structural,0.9441,0.0585,0.8029,0.9968
+Biological Corridor,Compositional,0.946,0.02,0.9172,0.9741
+Botanical Park,Functional,0.5221,,0.5221,0.5221
+Botanical Park,Structural,0.8595,,0.8595,0.8595
+Botanical Park,Compositional,0.8832,,0.8832,0.8832
+National Park,Functional,0.6585,0.0877,0.5083,0.7308
+National Park,Structural,0.9729,0.0223,0.9438,0.996
+National Park,Compositional,0.9668,0.0091,0.9604,0.9827
+Strict Nature Reserve,Functional,0.7807,,0.7807,0.7807
+Strict Nature Reserve,Structural,0.973,,0.973,0.973
+Strict Nature Reserve,Compositional,0.9531,,0.9531,0.9531
+Wildlife Sanctuary,Functional,0.6374,0.1145,0.4763,0.7202
+Wildlife Sanctuary,Structural,0.9569,0.0583,0.8705,0.9983
+Wildlife Sanctuary,Compositional,0.9569,0.0218,0.9288,0.9815

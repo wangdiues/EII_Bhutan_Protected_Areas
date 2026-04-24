@@ -1,0 +1,32 @@
+Google Earth Engine Assets Used
+============================================================
+Generated: 2026-04-24T11:25:07.075660
+
+EII Global v1:
+  projects/landler-open-data/assets/eii/global/eii_global_v1
+
+Analysis Scale (m):
+  300
+
+Analysis CRS:
+  EPSG:4326
+
+Percentiles:
+  [5, 25, 50, 75, 95]
+
+
+# Covariates (added 2026-04-24T11:26:19.608026)
+human_modification: CSP/HM/GlobalHumanModification
+hansen_forest: UMD/hansen/global_forest_change_2024_v1_12
+ndvi_modis: MODIS/061/MOD13Q1
+burned_area: MODIS/061/MCD64A1
+worldcover: ESA/WorldCover/v200
+elevation: USGS/SRTMGL1_003
+
+# Inside/Outside Analysis (added 2026-04-24T11:34:42.733091)
+EII Asset: projects/landler-open-data/assets/eii/global/eii_global_v1
+Buffer distances (km): [10.0]
+
+# Validation (added 2026-04-24T11:55:43.262866)
+NDVI: MODIS/061/MOD13Q1
+Hansen: UMD/hansen/global_forest_change_2024_v1_12

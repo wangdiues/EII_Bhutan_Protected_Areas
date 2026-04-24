@@ -1,0 +1,41 @@
+Section,Metric,Value
+Network Statistics,Number of Protected Areas,20
+Network Statistics,Total Network Area (km²),20151.27
+Network Statistics,Total Analyzed Pixels,261610
+Network Statistics,Analysis Scale (m),300
+EII Summary (PA-level means),Simple Mean,0.6518
+EII Summary (PA-level means),Area-Weighted Mean,0.6783
+EII Summary (PA-level means),Pixel-Weighted Mean,0.6779
+EII Summary (PA-level means),Standard Deviation,0.0993
+EII Summary (PA-level means),Minimum,0.4755
+EII Summary (PA-level means),Maximum,0.8214
+EII Summary (PA-level means),Median,0.6729
+EII Summary (PA-level means),P5,0.478
+EII Summary (PA-level means),P25,0.6014
+EII Summary (PA-level means),P75,0.7156
+EII Summary (PA-level means),P95,0.7783
+EII Summary (PA-level means),Range,0.3459
+EII Summary (PA-level means),IQR,0.1142
+Top Performing PA,PA Code,BC 1
+Top Performing PA,Category,Biological Corridor 1
+Top Performing PA,EII Mean,0.8214
+Top Performing PA,Area (km²),255.55
+Lowest Performing PA,PA Code,PWS
+Lowest Performing PA,Category,Phibsoo Wildlife Sanctuary
+Lowest Performing PA,EII Mean,0.4755
+Lowest Performing PA,Area (km²),287.18
+Component Summary,Functional Mean,0.6555
+Component Summary,Functional SD,0.0975
+Component Summary,Functional Min,0.4763
+Component Summary,Functional Max,0.8251
+Component Summary,Functional Median,0.6735
+Component Summary,Structural Mean,0.951
+Component Summary,Structural SD,0.052
+Component Summary,Structural Min,0.8029
+Component Summary,Structural Max,0.9983
+Component Summary,Structural Median,0.9701
+Component Summary,Compositional Mean,0.9506
+Component Summary,Compositional SD,0.0243
+Component Summary,Compositional Min,0.8832
+Component Summary,Compositional Max,0.9827
+Component Summary,Compositional Median,0.9575

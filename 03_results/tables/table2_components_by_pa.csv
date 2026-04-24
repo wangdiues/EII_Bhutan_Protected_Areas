@@ -1,0 +1,21 @@
+PA Code,Category,Area (km²),Compositional Mean,Functional Mean,Structural Mean,Compositional SD,Functional SD,Structural SD
+BC 1,Biological Corridor 1,255.55,0.9346,0.8251,0.9809,0.0306,0.096,0.0289
+BC 2,Biological Corridor 2,291.76,0.9411,0.6656,0.9759,0.0324,0.1292,0.0458
+BC 3,Biological Corridor 3,407.12,0.9527,0.5371,0.9228,0.0213,0.0801,0.0908
+BC 4,Biological Corridor 4,594.65,0.9692,0.6862,0.9591,0.022,0.1259,0.0675
+BC 5,Biological Corridor 5,205.83,0.9172,0.4947,0.8029,0.0312,0.1018,0.1201
+BC 6,Biological Corridor 6,232.77,0.9741,0.7149,0.9968,0.0152,0.1093,0.0042
+BC 7,Biological Corridor 7,419.66,0.9646,0.6722,0.9811,0.0277,0.1306,0.027
+BC 8,Biological Corridor 8,558.6,0.9303,0.6991,0.9488,0.0366,0.1396,0.0653
+BC 9,Biological Corridor 9,401.1,0.9299,0.6693,0.9285,0.067,0.1326,0.0716
+BWS,Bumdeling Wildlife Sanctuary,1534.24,0.9815,0.7179,0.9983,0.0167,0.1325,0.0039
+JDWNP,Jigme Dorji Wangchuch National Park,4374.06,0.9635,0.6748,0.996,0.0321,0.1682,0.0119
+JKSNR,Jigme Khesar Strick Nature Reserve,784.22,0.9531,0.7807,0.973,0.028,0.131,0.0533
+JSWNP,Jigme Singye Wangchuck National Park,1730.06,0.9655,0.6688,0.9672,0.0269,0.1324,0.0671
+JWS,Jomotsangkha Wildlife Sanctuary,362.49,0.9288,0.6352,0.8705,0.0432,0.0993,0.1461
+PNP,Phrumsengla National Park,906.65,0.9604,0.7308,0.9627,0.0205,0.1303,0.0607
+PWS,Phibsoo Wildlife Sanctuary,287.18,0.9546,0.4763,0.9764,0.0244,0.0618,0.0407
+RBP,Royal Botanical Park,91.2,0.8832,0.5221,0.8595,0.0477,0.0635,0.098
+RMNP,Royal Manas National Park,1057.02,0.9619,0.5083,0.9438,0.0232,0.1093,0.0703
+SWS,Sakteng Wildlife Sanctuary,742.46,0.9625,0.7202,0.9822,0.0223,0.1471,0.0265
+WCNP,Wangchuck Centennial National Park,4914.63,0.9827,0.7099,0.9946,0.0261,0.1295,0.0134

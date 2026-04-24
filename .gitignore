@@ -1,0 +1,56 @@
+.venv/
+venv/
+.claude/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+06_Google_application_credentials/*.json
+!06_Google_application_credentials/.gitkeep
+
+05_reproducibility/pipeline_run_*.json
+05_reproducibility/errors/
+05_reproducibility/logs/
+05_reproducibility/*.log
+05_reproducibility/session_info.txt
+05_reproducibility/validation/
+02_scripts/**/__pycache__/
+02_scripts/**/_SUCCESS_*.txt
+02_scripts/**/_SKIPPED_*.txt
+
+.Rhistory
+folder_structure_tree.txt
+*.tmp
+
+# Local/private project notes and prompts.
+SECURITY.md
+Manuscript_prompt.md
+Scripting_prompt.md
+
+# Data policy: keep data products out of Git unless explicitly whitelisted.
+# Use release assets, Zenodo/OSF, or documented download/regeneration steps.
+01_data/01_raw/
+01_data/02_processed/
+01_data/03_tables/model_points_eii_covariates.csv
+01_data/03_tables/*_raw_data.csv
+
+# Large/generated manuscript packages and binary submission files.
+04_manuscript/
+
+# Ad-hoc manuscript repair scripts contain local paths and should not be part
+# of the public source package.
+02_scripts/03_analysis/_*.py
+
+# Generated figures are reproducible from scripts; keep only intentional
+# documentation/index files unless a specific figure is intentionally added.
+03_results/figures/*.png
+03_results/figures/*.jpg
+03_results/figures/*.jpeg
+03_results/figures/*.tif
+03_results/figures/*.tiff
