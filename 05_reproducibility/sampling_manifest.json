@@ -1,0 +1,33 @@
+{
+  "script": "14_sample_points_for_models",
+  "version": "1.0.0",
+  "timestamp": "2026-04-24T11:51:01.617027",
+  "sampling_config": {
+    "target_points": 50000,
+    "points_per_stratum": 1250,
+    "n_strata": 40,
+    "buffer_km": 10.0,
+    "random_seed": 42
+  },
+  "results": {
+    "total_points": 49963,
+    "inside_points": 24978,
+    "outside_points": 24985,
+    "pas_sampled": 20
+  },
+  "bands_extracted": [
+    "eii",
+    "functional_integrity",
+    "structural_integrity",
+    "compositional_integrity",
+    "hmi",
+    "treecover2000",
+    "forest_loss",
+    "ndvi_mean",
+    "ndvi_trend",
+    "fire_frequency",
+    "cropland",
+    "built_up",
+    "elevation"
+  ]
+}

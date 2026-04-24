@@ -1,0 +1,36 @@
+{
+  "script": "12_prepare_covariates",
+  "version": "1.0.2",
+  "timestamp": "2026-04-24T11:26:19.606104",
+  "covariates_prepared": [
+    "human_modification",
+    "hansen_forest",
+    "ndvi_modis",
+    "burned_area",
+    "worldcover",
+    "elevation"
+  ],
+  "combined_bands": [
+    "gHM",
+    "treecover2000",
+    "forest_loss",
+    "forest_loss_rate",
+    "lossyear",
+    "ndvi_mean",
+    "ndvi_std",
+    "ndvi_trend",
+    "fire_frequency",
+    "fire_density",
+    "cropland",
+    "built_up",
+    "elevation"
+  ],
+  "assets_used": {
+    "human_modification": "CSP/HM/GlobalHumanModification",
+    "hansen_forest": "UMD/hansen/global_forest_change_2024_v1_12",
+    "ndvi_modis": "MODIS/061/MOD13Q1",
+    "burned_area": "MODIS/061/MCD64A1",
+    "worldcover": "ESA/WorldCover/v200",
+    "elevation": "USGS/SRTMGL1_003"
+  }
+}

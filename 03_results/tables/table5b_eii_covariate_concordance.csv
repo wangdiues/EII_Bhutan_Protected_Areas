@@ -1,0 +1,10 @@
+Covariate,N,Pearson r,Pearson p,Spearman rho,Spearman p,Mean Rank Diff,Max Rank Diff,Pearson Sig.,Spearman Sig.
+elevation,20,0.7894,0.0,0.7429,0.0002,3.0,9.0,True,True
+ndvi,20,-0.6362,0.0026,-0.8,0.0,9.8,18.0,True,True
+treecover2000,20,-0.5628,0.0098,-0.6075,0.0045,8.8,17.0,True,True
+hmi,20,-0.5024,0.024,-0.5128,0.0208,8.7,18.0,True,True
+fire_frequency,20,-0.342,0.1399,-0.3698,0.1085,8.6,15.0,False,False
+built_up,20,-0.3206,0.1681,-0.2225,0.3457,6.4,16.0,False,False
+ndvi_trend,20,0.3198,0.1693,0.3098,0.1838,5.4,15.0,False,False
+cropland,20,-0.2017,0.3938,-0.4543,0.0442,8.2,18.0,False,True
+forest_loss,20,0.2014,0.3945,-0.0105,0.9649,7.3,13.0,False,False

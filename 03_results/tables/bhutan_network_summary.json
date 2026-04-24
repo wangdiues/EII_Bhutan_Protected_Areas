@@ -1,0 +1,58 @@
+{
+  "Network Statistics": {
+    "Number of Protected Areas": 20,
+    "Total Network Area (km\u00b2)": 20151.27,
+    "Total Analyzed Pixels": 261610,
+    "Analysis Scale (m)": 300
+  },
+  "EII Summary (PA-level means)": {
+    "Simple Mean": 0.6518,
+    "Area-Weighted Mean": 0.6783,
+    "Pixel-Weighted Mean": 0.6779,
+    "Standard Deviation": 0.0993,
+    "Minimum": 0.4755,
+    "Maximum": 0.8214,
+    "Median": 0.6729,
+    "P5": 0.478,
+    "P25": 0.6014,
+    "P75": 0.7156,
+    "P95": 0.7783,
+    "Range": 0.3459,
+    "IQR": 0.1142
+  },
+  "Top Performing PA": {
+    "PA Code": "BC 1",
+    "Category": "Biological Corridor 1",
+    "EII Mean": 0.8214,
+    "Area (km\u00b2)": 255.55
+  },
+  "Lowest Performing PA": {
+    "PA Code": "PWS",
+    "Category": "Phibsoo Wildlife Sanctuary",
+    "EII Mean": 0.4755,
+    "Area (km\u00b2)": 287.18
+  },
+  "Component Summary": {
+    "Functional": {
+      "Mean": 0.6555,
+      "SD": 0.0975,
+      "Min": 0.4763,
+      "Max": 0.8251,
+      "Median": 0.6735
+    },
+    "Structural": {
+      "Mean": 0.951,
+      "SD": 0.052,
+      "Min": 0.8029,
+      "Max": 0.9983,
+      "Median": 0.9701
+    },
+    "Compositional": {
+      "Mean": 0.9506,
+      "SD": 0.0243,
+      "Min": 0.8832,
+      "Max": 0.9827,
+      "Median": 0.9575
+    }
+  }
+}

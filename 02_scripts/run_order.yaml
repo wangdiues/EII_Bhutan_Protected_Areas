@@ -1,0 +1,153 @@
+# EII Bhutan Protected Areas - Pipeline Execution Order
+# Version: 1.2.0
+# Last Updated: 2026-04-24
+#
+# This file defines the execution order for the analysis pipeline.
+# Any changes to this order MUST be documented in 00_admin/CHANGELOG.md
+
+pipeline:
+  name: "EII Bhutan PA Analysis"
+  version: "1.2.0"
+  description: "Complete pipeline for Ecosystem Integrity Index analysis of Bhutan Protected Areas"
+
+stages:
+  # Stage 1: Setup
+  - stage: "setup"
+    description: "Authentication and AOI definition"
+    scripts:
+      - name: "01_authenticate_gee.py"
+        path: "01_setup/01_authenticate_gee.py"
+        description: "Authenticate to Google Earth Engine"
+        required: true
+
+      - name: "02_define_aoi.py"
+        path: "01_setup/02_define_aoi.py"
+        description: "Define and validate Area of Interest"
+        required: true
+        depends_on: ["01_authenticate_gee.py"]
+
+  # Stage 2: Download
+  - stage: "download"
+    description: "Download EII data from Google Earth Engine"
+    scripts:
+      - name: "03_download_eii.py"
+        path: "02_download/03_download_eii.py"
+        description: "Download EII zonal statistics"
+        required: true
+        depends_on: ["02_define_aoi.py"]
+
+      - name: "04_download_components.py"
+        path: "02_download/04_download_components.py"
+        description: "Download component rasters"
+        required: false
+        depends_on: ["03_download_eii.py"]
+
+      - name: "05_download_npp.py"
+        path: "02_download/05_download_npp.py"
+        description: "Download NPP predictions"
+        required: false
+        depends_on: ["03_download_eii.py"]
+
+  # Stage 3: Analysis
+  - stage: "analysis"
+    description: "Statistical analysis of EII data"
+    scripts:
+      - name: "06_pa_zonal_stats.py"
+        path: "03_analysis/06_pa_zonal_stats.py"
+        description: "Process PA-level zonal statistics"
+        required: true
+        depends_on: ["03_download_eii.py"]
+
+      - name: "07_compare_pa_categories.py"
+        path: "03_analysis/07_compare_pa_categories.py"
+        description: "Compare EII across PA categories"
+        required: true
+        depends_on: ["06_pa_zonal_stats.py"]
+
+      - name: "08_summary_statistics.py"
+        path: "03_analysis/08_summary_statistics.py"
+        description: "Compute network-wide summary statistics"
+        required: true
+        depends_on: ["07_compare_pa_categories.py"]
+
+  # Stage 4: Visualization
+  - stage: "visualization"
+    description: "Generate figures and maps"
+    scripts:
+      - name: "09_maps_eii.py"
+        path: "04_visualization/09_maps_eii.py"
+        description: "Generate EII choropleth map"
+        required: true
+        depends_on: ["06_pa_zonal_stats.py"]
+
+      - name: "10_maps_components.py"
+        path: "04_visualization/10_maps_components.py"
+        description: "Generate component integrity maps"
+        required: true
+        depends_on: ["06_pa_zonal_stats.py"]
+
+      - name: "11_figures_publication.py"
+        path: "04_visualization/11_figures_publication.py"
+        description: "Generate publication-ready figures"
+        required: true
+        depends_on: ["08_summary_statistics.py"]
+
+  # Stage 5: Extended Analysis (Counterfactual & Triangulation)
+  - stage: "extended_analysis"
+    description: "Counterfactual, triangulation, and inferential analysis"
+    scripts:
+      - name: "12_prepare_covariates.py"
+        path: "02_download/12_prepare_covariates.py"
+        description: "Prepare GEE covariate datasets"
+        required: true
+        depends_on: ["03_download_eii.py"]
+
+      - name: "12_inside_outside_buffers.py"
+        path: "03_analysis/12_inside_outside_buffers.py"
+        description: "Counterfactual inside vs outside analysis"
+        required: true
+        depends_on: ["03_download_eii.py"]
+
+      - name: "13_covariates_zonal_stats.py"
+        path: "03_analysis/13_covariates_zonal_stats.py"
+        description: "Compute covariate zonal stats and concordance"
+        required: true
+        depends_on: ["12_prepare_covariates.py"]
+
+      - name: "14_sample_points_for_models.py"
+        path: "03_analysis/14_sample_points_for_models.py"
+        description: "Generate stratified sample points for modeling"
+        required: true
+        depends_on: ["12_inside_outside_buffers.py", "12_prepare_covariates.py"]
+
+      - name: "15_models_drivers.py"
+        path: "03_analysis/15_models_drivers.py"
+        description: "Run inferential regression models"
+        required: true
+        depends_on: ["14_sample_points_for_models.py"]
+
+      - name: "16_validation.py"
+        path: "03_analysis/16_validation.py"
+        description: "Validate EII against independent datasets"
+        required: true
+        depends_on: ["03_download_eii.py"]
+
+      - name: "12_figures_counterfactual_and_covariates.py"
+        path: "04_visualization/12_figures_counterfactual_and_covariates.py"
+        description: "Generate counterfactual and covariate figures"
+        required: true
+        depends_on: ["12_inside_outside_buffers.py", "13_covariates_zonal_stats.py"]
+
+# Execution flags (passed to all scripts)
+default_flags: []
+
+# Optional flags (user must explicitly enable)
+optional_flags:
+  - "--overwrite"
+  - "--enable-exports"
+  - "--enable-method-compare"
+  - "--allow-geometry-simplification"
+  - "--force-fallback"
+  - "--multi-buffer"
+  - "--buffer-km"
+  - "--target-points"
